@@ -1,0 +1,201 @@
+
+<html>
+    <head>
+        <title>Sudoku game</title>
+        <style>
+            h1{
+                color:rgb(107, 4, 107);
+                font-size: 50px;
+            }
+            .text1{
+                border-color: black;
+                width: 50px;
+                height: 50px;
+                font-size:40px;
+                text-align: center;
+            }
+            .text2{
+                background-color: rgb(204, 73, 117);
+                border-color: black;
+                width: 50px;
+                height: 50px;
+                font-size:40px;
+                text-align: center;
+            }
+            body{
+                background-color: palevioletred;
+            }
+            button{
+                width: 150px;
+                height: 50px;
+                background-color: maroon;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Sudoku game!!!</h1>
+            <form>
+                <input type="text" class="text1" id="input00" oninput="numbercheck('input00')">
+                <input type="text" class="text1" id="input01"value="2" disabled oninput="numbercheck('input01')">
+                <input type="text" class="text1" id="input02"oninput="numbercheck('input02')">
+                <input type="text" class="text2" id="input03" oninput="numbercheck('input03')">
+                <input type="text" class="text2" id="input04" oninput="numbercheck('input04')">
+                <input type="text" class="text2" id="input05"value="4" disabled oninput="numbercheck('input05')">
+                <input type="text" class="text1" id="input06"value="3" disabled oninput="numbercheck('input06')">
+                <input type="text" class="text1" id="input07"oninput="numbercheck('input07')">
+                <input type="text" class="text1" id="input08" oninput="numbercheck('input08')"><br>
+                <input type="text" class="text1" id="input10"value="9" disabled oninput="numbercheck('input10')">
+                <input type="text" class="text1" id="input11"oninput="numbercheck('input11')">
+                <input type="text" class="text1" id="input12" oninput="numbercheck('input12')">
+                <input type="text" class="text2" id="input13" oninput="numbercheck('input13')">
+                <input type="text" class="text2" id="input14"value="2" disabled oninput="numbercheck('input14')">
+                <input type="text" class="text2" id="input15"oninput="numbercheck('input15')">
+                <input type="text" class="text1" id="input16"oninput="numbercheck('input16')">
+                <input type="text" class="text1" id="input17"oninput="numbercheck('input17')">
+                <input type="text" class="text1" id="input18"value="8" disabled oninput="numbercheck('input18')"><br>
+                <input type="text" class="text1" id="input20"oninput="numbercheck('input20')">
+                <input type="text" class="text1" id="input21"oninput="numbercheck('input21')">
+                <input type="text" class="text1" id="input22"oninput="numbercheck('input22')">
+                <input type="text" class="text2" id="input23"value="6" disabled oninput="numbercheck('input23')">
+                <input type="text" class="text2" id="input24" oninput="numbercheck('input24')">
+                <input type="text" class="text2" id="input25"value="9" disabled oninput="numbercheck('input25')">
+                <input type="text" class="text1"id="input26" oninput="numbercheck('input26')">
+                <input type="text" class="text1" id="input27"value="5" disabled oninput="numbercheck('input27')">
+                <input type="text" class="text1" id="input28" oninput="numbercheck('input28')"><br>
+
+                <input type="text" class="text2" id="input30" oninput="numbercheck('input30')">
+                <input type="text" class="text2" id="input31" oninput="numbercheck('input31')">
+                <input type="text" class="text2" id="input32" oninput="numbercheck('input32')">
+                <input type="text" class="text1" id="input33" oninput="numbercheck('input33')">
+                <input type="text" class="text1" id="input34" oninput="numbercheck('input34')">
+                <input type="text" class="text1" id="input35" oninput="numbercheck('input35')">
+                <input type="text" class="text2" id="input36" oninput="numbercheck('input36')">
+                <input type="text" class="text2" id="input37" oninput="numbercheck('input37')">
+                <input type="text" class="text2" id="input38"value="1" disabled oninput="numbercheck('input38')"><br>
+                <input type="text" class="text2" id="input40" oninput="numbercheck('input40')">
+                <input type="text" class="text2" id="input41"value="7" disabled oninput="numbercheck('input41')">
+                <input type="text" class="text2" id="input42"value="2" disabled oninput="numbercheck('input42')">
+                <input type="text" class="text1" id="input43"value="5" disabled oninput="numbercheck('input43')">
+                <input type="text" class="text1" id="input44" oninput="numbercheck('input44')">
+                <input type="text" class="text1" id="input45"value="3" disabled oninput="numbercheck('input45')">
+                <input type="text" class="text2" id="input46"value="6" disabled oninput="numbercheck('input46')">
+                <input type="text" class="text2" id="input47"value="8" disabled oninput="numbercheck('input47')">
+                <input type="text" class="text2" id="input48" oninput="numbercheck('input48')"><br>
+                <input type="text" class="text2" id="input50"value="6" disabled oninput="numbercheck('input50')">
+                <input type="text" class="text2" id="input51"oninput="numbercheck('input51')">
+                <input type="text" class="text2" id="input52" oninput="numbercheck('input52')">
+                <input type="text" class="text1" id="input53" oninput="numbercheck('input53')">
+                <input type="text" class="text1" id="input54" oninput="numbercheck('input54')">
+                <input type="text" class="text1" id="input55" oninput="numbercheck('input55')">
+                <input type="text" class="text2" id="input56" oninput="numbercheck('input56')">
+                <input type="text" class="text2" id="input57" oninput="numbercheck('input57')">
+                <input type="text" class="text2" id="input58" oninput="numbercheck('input58')"><br>
+
+                <input type="text" class="text1" id="input60" oninput="numbercheck('input60')">
+                <input type="text" class="text1" id="input61"value="8" disabled oninput="numbercheck('input61')">
+                <input type="text" class="text1" id="input62" oninput="numbercheck('input62')">
+                <input type="text" class="text2" id="input63"value="2" disabled oninput="numbercheck('input63')">
+                <input type="text" class="text2" id="input64" oninput="numbercheck('input64')">
+                <input type="text" class="text2" id="input65"value="5" disabled oninput="numbercheck('input65')">
+                <input type="text" class="text1" id="input66" oninput="numbercheck('input66')">
+                <input type="text" class="text1" id="input67" oninput="numbercheck('input67')">
+                <input type="text" class="text1" id="input68" oninput="numbercheck('input68')"><br>
+                <input type="text" class="text1" id="input70"value="1" disabled oninput="numbercheck('input70')">
+                <input type="text" class="text1" id="input71" oninput="numbercheck('input71')">
+                <input type="text" class="text1" id="input72" oninput="numbercheck('input72')">
+                <input type="text" class="text2" id="input73" oninput="numbercheck('input73')">
+                <input type="text" class="text2" id="input74" oninput="numbercheck('input74')">
+                <input type="text" class="text2" id="input75" oninput="numbercheck('input75')">
+                <input type="text" class="text1" id="input76" oninput="numbercheck('input76')">
+                <input type="text" class="text1" id="input77" oninput="numbercheck('input77')">
+                <input type="text" class="text1" id="input78"value="3" disabled oninput="numbercheck('input78')"><br>
+                <input type="text" class="text1" id="input80" oninput="numbercheck('input80')">
+                <input type="text" class="text1" id="input81" oninput="numbercheck('input81')">
+                <input type="text" class="text1" id="input82"value="9" disabled oninput="numbercheck('input82')">
+                <input type="text" class="text2" id="input83"value="8" disabled oninput="numbercheck('input83')">
+                <input type="text" class="text2" id="input84" oninput="numbercheck('input84')">
+                <input type="text" class="text2" id="input85" oninput="numbercheck('input85')">
+                <input type="text" class="text1" id="input86" oninput="numbercheck('input86')">
+                <input type="text" class="text1" id="input87"value="6" disabled oninput="numbercheck('input87')">
+                <input type="text" class="text1" id="input88" oninput="numbercheck('input88')"><br><br>
+
+                <button type="button" onclick="checkgame()"><font color="white" size="5%">Check!!</font></button>
+                <button type="reset"><font color="white" size="5%">Reset</font></button>
+                <marquee><h1 id="message" value=""></h1></marquee>
+            </form>
+            
+            <script type="text/javascript">
+                function numbercheck(id){
+                    var a=document.getElementById(id);
+                    if(a.value<1 || a.value>9){
+                        alert("Number should be between 1 and 9");
+                        a.value="";
+                    }
+                }
+                function checkgame(){
+                    var row=0;
+                    var col=0;
+                    var num=0;
+                    var c=1;
+                    for(var i=0;i<9;i++){
+                        var sum=0
+                        var array=[];
+                        for(var j=0;j<9;j++){
+                            num=Number(document.getElementById("input"+i+j).value);
+                            if(array.includes(num)==false){
+                                sum+=num;
+                                array.push(num);
+                            }
+                            else if(array.includes(num)==true){
+                                c=0;
+                                break;
+                            }
+                        }
+                        if(sum==45 && c==1){
+                            row+=1;
+                        }
+                        else{
+                            c=0;
+                            //console.log(array);
+                            break;
+                        }
+                    }
+                    if(c==1){
+                        for(var i=0;i<9;i++){
+                            var sum=0;
+                            var num=0;
+                            var array=[];
+                            for(var j=0;j<9;j++){
+                                num=Number(document.getElementById("input"+j+i).value);
+                                if(array.includes(num)==false){
+                                    sum+=num;
+                                    array.push(num);
+                                }
+                                else if(array.includes(num)==true){
+                                    c=0;
+                                    break;
+                                }
+                            }
+                            if(sum==45 && c==1){
+                                col+=1
+                            }
+                            else{
+                                c=0;
+                                break;
+                            }
+                        }
+                    }
+                    if(row==9 && col==9 && c==1){
+                        alert("Puzzle solved")
+                        document.getElementById("message").innerText="Congratulations you solved it!!";
+                    }
+                    else{
+                        alert("Puzzle has not been solved");
+                        document.getElementById("message").innerText="Failed to solve ..Try again!!";
+                    }
+                }
+            </script>
+        </center>
+    </body>
+</html>
